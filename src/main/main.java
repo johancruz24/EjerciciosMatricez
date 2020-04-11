@@ -18,15 +18,24 @@ public class main {
         // TODO code application logic here
         
         //Crear la matriz
-        int matriz[][] = new int [5][5];
+        int matriz1[][] = new int [5][5];
+        int matrizFinal[][] = new int [5][5];
         //Captura de valores de la Matriz de forma aleatoria.
-        for(int i = 0;i < matriz.length;i++){
-            for(int y = 0;y < matriz.length;y++){
-            
-            int numero = (int)(Math.random()*100);            
-            }
+        System.out.println("Los números signados para la matriz son: ");
+        for(int x = 0;x < matriz1.length;x++){
+            for(int y = 0;y < matriz1.length;y++){                   
+                int numero = (int)(Math.random()*101);
+                matriz1[x][y]=numero;
+                matrizFinal[x][y]=matriz1[x][y];
+                System.out.print(matriz1[x][y]+ "|");
+               }
         }
-            
+         System.out.println("");
+            for(int x = 0;x < matriz1.length;x++){
+                for(int y = 0;y < matriz1.length;y++){
+                    System.out.print(matrizFinal[x][y]+ "|");
+                }
+            }
     }
     
 }

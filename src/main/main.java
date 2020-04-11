@@ -30,12 +30,7 @@ public class main {
                 System.out.print(matriz1[x][y]+ "|");
                }
         }
-         System.out.println("");
-            for(int x = 0;x < matriz1.length;x++){
-                for(int y = 0;y < matriz1.length;y++){
-                    System.out.print(matrizFinal[x][y]+ "|");
-                }
-            }
+         System.out.println("");            
     }
     
 }

@@ -23,8 +23,7 @@ public class main {
         for(int i = 0;i < matriz.length;i++){
             for(int y = 0;y < matriz.length;y++){
             
-            int numero = (int)(Math.random()*100);
-            
+            int numero = (int)(Math.random()*100);            
             }
         }
             

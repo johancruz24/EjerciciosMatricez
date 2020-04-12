@@ -140,6 +140,28 @@ public class main {
         int sumaDiag = sumaF + sumaC;
         System.out.println("La suma de las diagonales de la matriz es " +sumaDiag);
         System.out.println("/***************************************************/");
+        
+        //Linea para calcular la suma de la ultima fila de la matriz
+        int sumaFila = 0;
+        int ultimaFila [][] = new int [5][5];
+        for(int f = 0;f < matrizFinal.length; f++){
+            for(int c = 0;c < matrizFinal.length; c++){
+                if(f==4){//Diagonal Primaria
+                    sumaFila += matrizFinal[f][c];
+                    ultimaFila[f][c] = matrizFinal[f][c];                 
+                }
+            }        
         }
-     
+        //Impresion ultima fila
+        System.out.println("/***************************************************/");
+        System.out.println("La ultima fila de la matriz es ");
+        for(int h = 0; h < ultimaFila.length; h++){
+            for(int v = 0;v < ultimaFila.length; v++){
+                System.out.print(" [" +ultimaFila[h][v]+ "] ");                                
+            }System.out.println("");
+        }
+        System.out.println("-----------------------------------------------------");
+        System.out.println("La suma de la ultima fila es " +sumaFila);
+        System.out.println("/***************************************************/");
+        }     
 }

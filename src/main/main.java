@@ -28,8 +28,9 @@ public class main {
                 int numero = (int)(Math.random()*101);
                 matriz1[x][y]=numero;
                 matrizFinal[x][y]=matriz1[x][y];
-                System.out.print(matriz1[x][y]+ "|");                 
+                System.out.print(" [" +matriz1[x][y]+ "] ");                 
                }
+            System.out.println("");  
         }
         System.out.println("");      
          
@@ -94,6 +95,47 @@ public class main {
             }
         }
         System.out.println("");
+        System.out.println("/***************************************************/");
+        
+        //Lineas para calcular la suma de las diagonales de la matriz
+        int sumaF = 0, sumaC = 0;
+        int diagPrin [][] = new int[5][5];
+        int diagSecn [][] = new int[5][5];
+        for(int f = 0;f < matrizFinal.length; f++){
+            for(int c = 0;c < matrizFinal.length; c++){
+                if(f==c){//Diagonal Primaria
+                    sumaF += matrizFinal[f][c];
+                    diagPrin[f][c] = matrizFinal[f][c];
+                    
+                
+                }if(f+c == 4){//Diagonal Secundaria
+                    sumaC += matrizFinal[f][c];
+                    diagSecn[f][c] = matrizFinal[f][c];
+                }
+            }
+        }//Impresion de la diagonal primaria
+        System.out.println("/***************************************************/");
+        System.out.println("La diagonal principal de la matriz es ");
+        for(int d =  0; d < diagPrin.length; d++){
+                for(int c = 0; c < diagPrin.length; c++){
+                    System.out.print(" [" +diagPrin[d][c]+ "] ");
+                }
+                System.out.println("");
+            }
+        System.out.println("-----------------------------------------------------");
+        System.out.println("La suma de la diagonal es " +sumaF);
+        System.out.println("/***************************************************/");
+        //Impresión de la diagonal secuandaria
+        System.out.println("/***************************************************/");
+        System.out.println("La diagonal secundaria de la matriz es ");
+        for(int d =  0; d < diagSecn.length; d++){
+                for(int c = 0; c < diagSecn.length; c++){
+                    System.out.print(" [" +diagSecn[d][c]+ "] ");
+                }
+                System.out.println("");
+            }
+        System.out.println("-----------------------------------------------------");
+        System.out.println("La suma de la diagonal es " +sumaC);
         System.out.println("/***************************************************/");
         }
      

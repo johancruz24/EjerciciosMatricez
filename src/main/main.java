@@ -33,11 +33,12 @@ public class main {
         }
         System.out.println("");      
          
+        //Lineas para calcular promedio de los elementos de la matriz
         int suma = 0;
         float promedio = 0;
-        for(int r =0; r < matriz1.length; r++){
-            for(int t = 0;t < matriz1.length; t++){
-                suma = suma + matriz1[r][t];
+        for (int[] matriz11 : matriz1) {
+            for (int t = 0; t < matriz1.length; t++) {
+                suma = suma + matriz11[t];
             }
         }
         promedio = suma/25;
@@ -47,22 +48,40 @@ public class main {
         System.out.println("");
         System.out.println("/***************************************************/");
      
-    int mayor = 0, contador = 0;
-    for(int k = 0; k < matriz1.length; k++){
-        for(int n = 0; n < matriz1.length; n++){
-            if(matriz1[k][n] == mayor){
-                contador++;                  
-            }
-            if(matriz1[k][n]>mayor){                
-                mayor=matriz1[k][n]; 
-           
+        //Lineas para calcular mayor de la matriz y las veces que se repite
+        int mayor = 0, contador = 0;
+        for (int[] matriz11 : matriz1) {
+            for (int n = 0; n < matriz1.length; n++) {
+                if (matriz11[n] == mayor) {
+                    contador++;                  
+                }
+                if (matriz11[n] > mayor) {
+                    mayor = matriz11[n];
+                }
             }
         }
-    }
-    System.out.println("/*******************************************************/");
-    System.out.println("El numero mayor es " +mayor);
-    System.out.println("El número " +mayor+ " se repite " +contador+ " veces");
-    System.out.println("/*******************************************************/");
-    }
+        System.out.println("/*******************************************************/");
+        System.out.println("El numero mayor es " +mayor);
+        System.out.println("El número " +mayor+ " se repite " +contador+ " veces");
+        System.out.println("/*******************************************************/");
+        
+        //Lineas para calcular los números primos dentro de la matriz
+        System.out.println("/***************************************************/");
+        System.out.println("Los números primos que se encuentran en la matriz son ");
+        for(int[]matriz11: matriz1){
+            for(int a = 0; a < matriz1.length; a++){
+                int aux = 0;
+                for(int b = 1; b < (matriz11[a]+1); b++){
+                    if(matriz11[a] % b == 0){
+                        aux++;
+                    }
+                }if(aux == 2){
+                    System.out.print(matriz11[a]+ "|");
+                    }                    
+            }
+        }
+        System.out.println("");
+        System.out.println("/***************************************************/");
+        }
      
 }

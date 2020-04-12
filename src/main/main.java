@@ -28,11 +28,10 @@ public class main {
                 int numero = (int)(Math.random()*101);
                 matriz1[x][y]=numero;
                 matrizFinal[x][y]=matriz1[x][y];
-                System.out.print(matriz1[x][y]+ "|"); 
-                
+                System.out.print(matriz1[x][y]+ "|");                 
                }
         }
-         System.out.println("");      
+        System.out.println("");      
          
         int suma = 0;
         float promedio = 0;
@@ -47,7 +46,23 @@ public class main {
         System.out.printf("%.2f", +promedio);
         System.out.println("");
         System.out.println("/***************************************************/");
-        
+     
+    int mayor = 0, contador = 0;
+    for(int k = 0; k < matriz1.length; k++){
+        for(int n = 0; n < matriz1.length; n++){
+            if(matriz1[k][n] == mayor){
+                contador++;                  
+            }
+            if(matriz1[k][n]>mayor){                
+                mayor=matriz1[k][n]; 
+           
+            }
+        }
+    }
+    System.out.println("/*******************************************************/");
+    System.out.println("El numero mayor es " +mayor);
+    System.out.println("El número " +mayor+ " se repite " +contador+ " veces");
+    System.out.println("/*******************************************************/");
     }
      
 }

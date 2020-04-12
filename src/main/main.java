@@ -123,7 +123,7 @@ public class main {
                 System.out.println("");
             }
         System.out.println("-----------------------------------------------------");
-        System.out.println("La suma de la diagonal es " +sumaF);
+        System.out.println("La suma de la diagonal principal es " +sumaF);
         System.out.println("/***************************************************/");
         //Impresión de la diagonal secuandaria
         System.out.println("/***************************************************/");
@@ -135,7 +135,10 @@ public class main {
                 System.out.println("");
             }
         System.out.println("-----------------------------------------------------");
-        System.out.println("La suma de la diagonal es " +sumaC);
+        System.out.println("La suma de la diagonal secundaria es " +sumaC);
+        System.out.println("/***************************************************/");
+        int sumaDiag = sumaF + sumaC;
+        System.out.println("La suma de las diagonales de la matriz es " +sumaDiag);
         System.out.println("/***************************************************/");
         }
      

@@ -17,6 +17,7 @@ public class main {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        
         //Crear la matriz
         int matriz1[][] = new int [5][5];
         int matrizFinal[][] = new int [5][5];
@@ -27,10 +28,26 @@ public class main {
                 int numero = (int)(Math.random()*101);
                 matriz1[x][y]=numero;
                 matrizFinal[x][y]=matriz1[x][y];
-                System.out.print(matriz1[x][y]+ "|");
+                System.out.print(matriz1[x][y]+ "|"); 
+                
                }
         }
-         System.out.println("");            
+         System.out.println("");      
+         
+        int suma = 0;
+        float promedio = 0;
+        for(int r =0; r < matriz1.length; r++){
+            for(int t = 0;t < matriz1.length; t++){
+                suma = suma + matriz1[r][t];
+            }
+        }
+        promedio = suma/25;
+        System.out.println("/***************************************************/");
+        System.out.println("El promedio de la Matriz es: ");
+        System.out.printf("%.2f", +promedio);
+        System.out.println("");
+        System.out.println("/***************************************************/");
+        
     }
-    
+     
 }

@@ -82,6 +82,19 @@ public class main {
         }
         System.out.println("");
         System.out.println("/***************************************************/");
+        
+        //Lineas para identificar números pares de la matriz
+        System.out.println("/***************************************************/");
+        System.out.println("Los números pares que se encuentran en la matriz son ");
+        for(int []matriz12:matriz1){
+            for(int u = 0;u < matriz12.length; u++){
+                if(matriz12[u] % 2 == 0){
+                    System.out.print(matriz12[u]+ "|");
+                }
+            }
+        }
+        System.out.println("");
+        System.out.println("/***************************************************/");
         }
      
 }
